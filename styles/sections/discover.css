@@ -1,0 +1,52 @@
+/* ------------------------- Discover Page Sections -------------------------------------------------- */
+/* ------------------------- Section - Discover Header -------------------------------------------------- */
+
+.section-discover-header {
+   padding-bottom: 0;
+}
+
+/* ------------------------- Section - Discover Cards -------------------------------------------------- */
+
+.section-discover-cards {
+   padding-top: calc(var(--gap) * 3);
+}
+
+.section-discover-cards .row.grid {
+   --columns: 3;
+   --grid-gap: var(--container-padding);
+   gap: calc(var(--gap) * 3) var(--grid-gap);
+}
+
+.section-discover-cards + .section-small-image {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+   .section-discover-cards .row.grid {
+      --columns: 2;
+      gap: calc(var(--gap) * 1) var(--grid-gap);
+   }
+}
+
+@media screen and (max-width: 720px) {
+   .section-discover-cards .row.grid {
+      --columns: 1;
+   }
+}
+
+/* ------------------------- Section - Discover Single Header -------------------------------------------------- */
+
+.section-discover-single-header + .section-big-image .background-media {
+   min-height: 90vh;
+}
+
+@media (hover: none) { 
+   @media screen and (max-width: 1024px) {
+      .section-discover-single-header + .section-big-image .background-media {
+         min-height: 65vh;
+         min-height: calc(var(--vh, 1vh) * 65);
+      }
+   }
+}
+

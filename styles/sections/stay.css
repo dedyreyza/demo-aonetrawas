@@ -1,0 +1,66 @@
+/* ------------------------- Stay Page Sections -------------------------------------------------- */
+/* ------------------------- Section - Stay Slider -------------------------------------------------- */
+
+.section-stay-slider {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+/* ------------------------- Section - Stay Header -------------------------------------------------- */
+
+.section-stay-header {
+   padding-bottom: 0;
+}
+
+/* ------------------------- Section - Stay Cards -------------------------------------------------- */
+
+.section-stay-cards {
+   padding-top: calc(var(--gap) * 3);
+}
+
+.section-stay-cards .row.grid {
+   --columns: 2;
+   --grid-gap: var(--container-padding);
+   gap: calc(var(--gap) * 3) var(--grid-gap);
+}
+
+@media screen and (max-width: 720px) {
+   .section-stay-cards .row.grid {
+      --columns: 1;
+      gap: calc(var(--gap) * 2.5) var(--grid-gap);
+   }
+}
+
+
+.card-small {
+   border-radius: 12px;
+   box-shadow: 0 4px 4px 0 rgba(41, 41, 41, 0.2);
+}
+
+/* ------------------------- Section - Stay Single Header -------------------------------------------------- */
+
+.section-stay-single-header {
+   overflow: hidden;
+   padding: 0;
+}
+
+.section-stay-single-header .overlay-dark-gradient {   
+   background: radial-gradient(circle at 50% 50%, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%);
+   transform: scale(1);
+   opacity: 0.5;
+}
+   
+.section-stay-single-header h1 {
+   font-size: calc(var(--title-size) * 1);
+}
+
+.section-stay-single-header .styled-col {
+   gap: calc(var(--gap) * 2);
+}
+
+@media screen and (max-width: 540px) {
+   .section-stay-single-header h1 {
+      font-size: calc(var(--title-size) * 0.7);
+   }
+}
+

@@ -1,95 +1,70 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
 
-export default function Home() {
+import LoadingScreen from '@/components/layout/loading-screen';
+import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
+import Hero from '@/components/home/hero';
+import Intro from '@/components/home/intro';
+import IntroAfter from '@/components/home/intro-after';
+import VillaSlider from '@/components/home/villa-slider';
+import ImageSplit from '@/components/home/image-split';
+import PackagesIntro from '@/components/home/packages-intro';
+import PackagesCards from '@/components/home/packages-cards';
+import { useParallax } from '@/hooks/useParallax';
+import { useScrollDetection } from '@/hooks/useScrollDetection';
+
+export default function HomePage() {
+  // Initialize parallax effects
+  useParallax();
+
+  // Initialize scroll direction detection for navbar
+  useScrollDetection();
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <LoadingScreen />
+      <Header />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+      <main className="main" id="main" data-barba="container">
+        <div className="main-wrap" id="main-wrap">
+          <Hero />
+          <Intro />
+          <IntroAfter />
+          <VillaSlider />
+
+          <ImageSplit
+            imageSrc="/media/home/sections/outside.jpg"
+            imageAlt="Allamanda outside"
+            eyebrow="The property"
+            title="A pool, massages and more."
+            titleAccent="All in a tropical nursery."
+            description="Located just minutes away from Malindi's world famous beaches, Allamanda is built inside a gorgeous tropical nursery, centered around a lovely swimming pool."
+            buttonText="Explore"
+            buttonHref="#"
+          />
+
+          <ImageSplit
+            imageSrc="/media/home/sections/dining.jpg"
+            imageAlt="Dining at Allamanda"
+            eyebrow="Our spa"
+            title="Be pampered in paradise."
+            titleAccent="Or take the holiday by the horns."
+            description="If a relaxing and fully-serviced holiday is what you are looking for, we have it. From our enjoy packages below, to massage treatments or a stellar chef for catering. However, for those who wish to do things themselves, we have everything you need."
+            buttonText="Learn more"
+            buttonHref="#"
+            buttonStyle="grey"
+            flipped={true}
+            bgColor="white"
+            imageOverlay={true}
+            titleSmall={true}
+          />
+
+          <PackagesIntro />
+          <PackagesCards />
+
+          <Footer />
         </div>
       </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }

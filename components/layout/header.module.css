@@ -1,0 +1,15 @@
+/* ⚠️ NOT USED - Reference Only
+ *
+ * This CSS module is NOT imported by header.tsx
+ * The actual CSS for this component is in: styles/layout.css
+ *
+ * Component uses global classes:
+ * - .main-nav-bar
+ * - .cheeseburger
+ * - .side-nav
+ * - .nav-link
+ *
+ * This file is kept as reference for potential future CSS module migration.
+ * Note: Converting header to CSS modules would be complex due to extensive
+ * use of data attributes and state-based styling.
+ */

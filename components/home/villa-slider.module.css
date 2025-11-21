@@ -1,0 +1,16 @@
+/* ⚠️ NOT USED - Reference Only
+ *
+ * This CSS module is NOT imported by villa-slider.tsx
+ * The actual CSS for this component is in: styles/libraries.css
+ *
+ * Component uses Swiper library global styles:
+ * - .swiper-slider-group
+ * - .swiper-slider-group[data-swiper-slider-type="stay"]
+ *
+ * These styles are kept global because:
+ * 1. Swiper library expects global class names
+ * 2. Shared across potential future slider components
+ * 3. Complex responsive/animation styles (500+ lines)
+ *
+ * This file is kept as reference for documentation purposes.
+ */

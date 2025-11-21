@@ -1,0 +1,170 @@
+/* ------------------------- Home Page Sections -------------------------------------------------- */
+/* ------------------------- Section - Home Header -------------------------------------------------- */
+
+.section-home-header {
+   overflow: hidden;
+   padding: 0;
+   height: 100vh;
+}
+
+.section-home-header .row-title {
+   
+   padding-top: 50vh;
+   align-items: flex-end;
+   padding-bottom: calc(var(--gap) * 3);
+
+}
+
+.section-home-header .row-btn {
+   padding-bottom: var(--section-padding);
+}
+
+.section-home-header .row {
+   align-items: flex-end;
+}
+
+.section-home-header .col-row-deco {
+   margin-top: calc(var(--gap) * -1);
+}
+
+.section-home-header .overlay-dark-gradient {   
+   background: radial-gradient(circle at 50% 65%, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7) 90%);
+   transform: scale(2, 1);
+}
+   
+
+@media (hover: none) { 
+   @media screen and (max-width: 1024px) {
+
+      .section-home-header .container {
+        height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-end;
+      }
+
+      .section-home-header .row-title  {
+         padding-top: calc(var(--nav-bar-height-mobile) + var(--section-padding));
+         min-height: unset;
+      }
+
+      .section-home-header .col-row-deco .deco-line-y {
+         height: 5vh;
+      }
+
+      .section-home-header .row-btn {
+         padding-bottom: calc(var(--gap) * 2);
+      }
+   }
+}
+
+/* ------------------------- Section - Home Intro -------------------------------------------------- */
+
+.section-home-intro .col-images-left,
+.section-home-intro .col-images-right {
+   gap: var(--section-padding);
+}
+
+.section-home-intro .col-images-left .col-row:nth-child(1) {
+   display: flex;
+   justify-content: flex-end;
+   padding-right: var(--gap);
+}
+
+.section-home-intro .col-images-left .col-row:nth-child(2) figure,
+.section-home-intro .col-images-right .col-row:nth-child(1) figure {
+   width: 80%;
+   border-radius: 12px;
+}
+
+.section-home-intro .col-images-right .col-row:nth-child(1) {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.section-home-intro .col-images-right .col-row:nth-child(2) {
+   display: flex;
+   padding-left: var(--gap);
+}
+
+.section-home-intro .col-images-left .col-row:nth-child(1) figure,
+.section-home-intro .col-images-right .col-row:nth-child(2) figure {
+   width: 40%;
+   border-radius: 6px;
+}
+
+.section-home-intro .styled-figure {
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+   box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+   
+}
+
+@media screen and (max-width: 1024px) {
+   .section-home-intro .row.grid {
+      --columns: 1;
+      gap: calc(var(--gap) * 2.5) var(--grid-gap);
+   }
+
+   .section-home-intro .col-images-left,
+   .section-home-intro .col-images-right {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+   }
+
+   .section-home-intro .col-images-left .col-row,
+   .section-home-intro .col-images-right .col-row {
+      width: 100%;
+      display: flex;
+   }
+
+   .section-home-intro .col-row-ornament {
+      display: none;
+   }
+}
+
+@media screen and (max-width: 720px) {
+
+
+   .section-home-intro .col-images-left,
+   .section-home-intro .col-images-right {
+      gap: 0;
+   }
+
+   .section-home-intro .col-images-left .col-row:nth-child(1) {
+      justify-content: flex-start;
+      padding-right: 0;
+   }
+   .section-home-intro .col-images-right .col-row:nth-child(2) {
+      justify-content: flex-end;
+      padding-left: 0;
+   }
+
+   .section-home-intro .col-images-left .col-row:nth-child(1) figure,
+   .section-home-intro .col-images-right .col-row:nth-child(2) figure {
+      width: calc(100% - calc(var(--gap) * 2));
+   }
+
+   .section-home-intro .col-images-left .col-row:nth-child(2) figure,
+   .section-home-intro .col-images-right .col-row:nth-child(1) figure {
+      width: 100%;
+   }
+
+}
+   
+
+/* ------------------------- Section - Home Intro After -------------------------------------------------- */
+
+.section-home-intro-after {
+   padding-top: calc(var(--gap) * 1.66);
+   padding-bottom: calc(var(--gap) * 1.66);
+}
+
+.section-home-intro-after .col {
+   gap: 1em;
+   max-width: 36em;
+}
+
+.hero {

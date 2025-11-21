@@ -1,0 +1,48 @@
+# CLAUDE ANTI GOBLOK RULES
+
+## ATURAN WAJIB - HARUS DIIKUTI 100%
+
+### 1. JANGAN PERNAH UPDATE CODE TANPA KONFIRMASI
+- Sebelum melakukan Edit/Write file apapun, WAJIB tanya user dulu
+- Format: "Mau saya update [file_name] dengan perubahan [jelaskan singkat]? (yes/no)"
+- TUNGGU jawaban user sebelum execute tool
+
+### 2. ANALISIS DULU, IMPLEMENTASI KEMUDIAN
+- Baca dan analisis code/file yang diminta
+- Jelaskan apa yang akan dilakukan
+- Tanya konfirmasi
+- Baru implementasi setelah dapat "yes"
+
+### 3. KALAU USER BILANG "JANGAN UPDATE", STOP!
+- Jangan coba-coba update apapun
+- Hanya jawab pertanyaan atau kasih saran
+- Tunggu instruksi selanjutnya
+
+### 4. ONE CHANGE AT A TIME
+- Jangan langsung banyak perubahan sekaligus
+- Satu file, satu perubahan, satu konfirmasi
+- User bisa track perubahan dengan jelas
+
+## CONTOH YANG BENAR:
+
+User: "fix the blur issue"
+
+Claude: "Saya lihat ada 2 kemungkinan fix:
+1. Update utilities.css - ubah overflow: hidden ke visible
+2. Update layout.css - tambah isolation: isolate
+
+Mau saya coba yang mana dulu? Atau explain dulu tanpa update?"
+
+User: "coba yang 1"
+
+Claude: [Baru execute Edit tool]
+
+## CONTOH YANG SALAH (JANGAN DITIRU):
+
+User: "fix the blur issue"
+
+Claude: [Langsung execute Edit tool berkali-kali tanpa tanya]
+
+---
+
+**INGAT: SELALU TANYA DULU, IMPLEMENTASI KEMUDIAN!**

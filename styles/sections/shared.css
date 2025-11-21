@@ -1,0 +1,176 @@
+/* ------------------------- Shared/Reusable Sections -------------------------------------------------- */
+/* ------------------------- Section - Image Split -------------------------------------------------- */
+
+.section-image-split .row.grid {
+   --columns: 2;
+   --grid-gap: calc(var(--gap) * 4);
+   align-items: center;
+}
+
+.section-image-split + .section-image-split {
+   padding-top: 0;
+}
+
+@media screen and (max-width: 1024px) {
+   .section-image-split .row.grid {
+      --columns: 2;
+      --grid-gap: calc(var(--gap) * 2);
+   }
+}
+
+@media screen and (min-width: 721px) {
+   .section-image-split .row.grid.flipped .col-image {
+      order: 3;
+   }
+}
+
+@media screen and (max-width: 720px) {
+   .section-image-split .row.grid {
+      --columns: 1;
+      gap: calc(var(--gap) * 2) var(--grid-gap);
+   }
+}
+
+/* ------------------------- Section - Text Split -------------------------------------------------- */
+
+.section-text-split .row.grid {
+   --columns: 2;
+   --grid-gap: calc(var(--gap) * 2);
+}
+
+.section-text-split .row.grid .col-row-text {
+   padding-top: 0.25em;
+}
+
+@media screen and (max-width: 720px) {
+   .section-text-split .row.grid {
+      --columns: 1;
+      gap: calc(var(--gap) * 2) var(--grid-gap);
+   }
+
+   .section-text-split .row.grid .col-row-text {
+      padding-top: 0em;
+   }
+}
+
+/* ------------------------- Section - Big Image -------------------------------------------------- */
+
+.section-big-image {
+   padding: 0;
+   position: relative;
+   overflow: hidden;
+}
+
+.section-big-image .background-media {
+   width: 100%;
+   position: relative;
+   min-height: 90vh;
+}
+
+.section-big-image.section-big-image-text {
+   padding-top: var(--section-padding);
+   padding-bottom: var(--section-padding);
+}
+
+.section-big-image.section-big-image-text .background-media {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+}
+
+.section-big-image.section-big-image-text .col-row-btn {
+   padding-top: var(--gap);
+}
+
+@media (hover: none) { 
+   @media screen and (max-width: 1024px) {
+      .section-big-image .background-media {
+         min-height: 90vh;
+         min-height: calc(var(--vh, 1vh) * 90);
+      }
+
+
+      .section-big-image.section-big-image-text {
+         padding-top: calc(var(--section-padding) * 1.5);
+         padding-bottom: calc(var(--section-padding) * 1.5);
+      }
+   }
+}
+
+/* ------------------------- Section - After Big Image -------------------------------------------------- */
+
+.section-after-big-image {
+   padding-top: 0;
+}
+
+.section-after-big-image .col-row-image {
+   padding-bottom: var(--gap);
+}
+
+.section-after-big-image .col-row-image:last-child {
+   padding-bottom: 0;
+}
+
+.section-after-big-image .styled-figure {
+   width: var(--card-width);
+   margin-top: calc((var(--card-width) * 1.333333) * -0.666);
+}
+
+/* ------------------------- Section - Three Images -------------------------------------------------- */
+
+.section-three-images {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+.section-three-images + .section-footer {
+   margin-top: var(--section-padding);
+}
+
+.section-three-images + .section-image-split {
+   margin-top: var(--section-padding);
+}
+
+.section-three-images-block .container.small .row.centered {
+   padding-bottom: calc(var(--gap) * 3.25);
+}
+
+@media screen and (min-width: 721px) {
+   .section-three-images.offset .col:nth-child(even),
+   .section-three-images-block.offset .col:nth-child(even) {
+      margin-top: var(--container-padding);
+   }
+}
+
+@media screen and (max-width: 720px) {
+
+   .section-three-images .row.grid,
+   .section-three-images-block .row.grid {
+      --columns: 2;
+   }
+
+   .section-three-images .col:nth-child(3),
+   .section-three-images-block .col:nth-child(3) {
+      display: none;
+   }
+}
+
+/* ------------------------- Section - Small Image -------------------------------------------------- */
+
+.section-small-image {
+   z-index: 2;
+}
+
+.section-small-image .col-row-image {
+   padding-top: var(--gap);
+}
+
+.section-small-image .styled-figure {
+   width: var(--card-width);
+}
+
+.section-small-image + .section-big-image {
+   margin-top: calc((var(--card-width) * 1.333333) * -0.666);
+}
+

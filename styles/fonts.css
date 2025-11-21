@@ -1,0 +1,61 @@
+/* Regola Font Family */
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/regola-light.woff2) format("woff2");
+  font-family: regola-light;
+  font-display: block;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/regola-book.woff2) format("woff2");
+  font-family: regola-book;
+  font-display: block;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/regola-regular.woff2) format("woff2");
+  font-family: regola-regular;
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/regola-medium.woff2) format("woff2");
+  font-family: regola-medium;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Regola';
+  src: url('/assets/fonts/regola-light.woff2') format('woff2');
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Regola';
+  src: url('/assets/fonts/regola-book.woff2') format('woff2');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Regola';
+  src: url('/assets/fonts/regola-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Regola';
+  src: url('/assets/fonts/regola-medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}

@@ -1,0 +1,12 @@
+/* ⚠️ NOT USED - Reference Only
+ *
+ * This CSS module is NOT imported by image-split.tsx
+ * The actual CSS for this component is in: styles/sections/shared.css
+ *
+ * Component uses global utility classes:
+ * - .section-image-split
+ * - .row, .col, .grid
+ * - Button and link utilities
+ *
+ * This file is kept as reference for potential future CSS module migration.
+ */

@@ -1,0 +1,187 @@
+/* ------------------------- Dining Page Sections -------------------------------------------------- */
+/* ------------------------- Section - Dining Intro -------------------------------------------------- */
+
+.section-dining-intro {
+   padding-bottom: calc(var(--gap) * 3.25);
+}
+
+/* ------------------------- Section - Menu -------------------------------------------------- */
+
+.section-menu .row-menu-controls {
+   padding-top: calc(var(--gap) * 1.5);
+   padding-bottom: calc(var(--gap) * 0.75);
+}
+
+.section-menu .row-disclaimer {
+   padding-top: calc(var(--gap) * 1.5);
+   padding-bottom: calc(var(--gap) * 1.5);
+}
+
+.section-menu .row-disclaimer p {
+   font-size: var(--copy-size-s);
+   opacity: 0.6;
+}
+
+/* Filter Controls */
+
+.section-menu .row-menu-controls .menu-controls {
+   display: flex;
+   gap: 1.5em;
+   overflow-x: scroll;
+}
+
+.section-menu .single-menu-btn {
+   display: flex;
+   padding: 0.4em 0em;
+   border-radius: 10em;
+   position: relative;
+   cursor: pointer;
+   transition: padding var(--animation-primary);
+}
+
+.section-menu .single-menu-btn[data-filter-status="active"] {
+   padding: 0.4em 0.9em;
+}
+
+.section-menu .single-menu-btn::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 10em;
+   border: 1px solid var(--color-border);
+   transition: opacity var(--animation-primary);
+   opacity: 0;
+}
+
+.section-menu .single-menu-btn[data-filter-status="active"]::before {
+   opacity: 1;
+}
+
+.section-menu .single-menu-btn span {
+   font-size: var(--copy-size-m);
+   opacity: 0.5;
+   transition: opacity var(--animation-primary);
+   color: var(--color-dark);
+   white-space: nowrap;
+}
+
+.section-menu .single-menu-btn:hover span {
+   opacity: 1;
+}
+
+.section-menu .single-menu-btn[data-filter-status="active"] span {
+   opacity: 1;
+   font-weight: 400;
+}
+
+/* Filter Items */
+
+.section-menu [data-filter-grid] .menu-list[data-filter-status="not-active"] {
+   display: none;
+}
+
+.section-menu [data-filter-grid] {
+	transform: translateY(0em) rotate(0.001deg);
+   transition: opacity .2s ease-out, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-menu [data-filter-grid].toggle-fade-out {
+	opacity: 0;
+	transform: translateY(0.5em) rotate(0.001deg);;
+	transition: opacity .2s ease-in, transform 0.2s cubic-bezier(0.7, 0, 0.84, 0);
+}
+ 
+.section-menu [data-filter-grid].toggle-fade-in {
+	opacity: 0;
+	transform: translateY(var(--gap)) rotate(0.001deg);
+}
+
+.section-menu .row-menu-grid .menu-list {
+   width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   gap: calc(var(--gap) * 0.75) var(--grid-gap);
+   --grid-gap: var(--container-padding);
+   --columns: 2;
+}
+
+.section-menu .row-menu-grid .single-menu-item {
+   width: calc((99.99% / var(--columns)) - (var(--grid-gap) * ((var(--columns) - 1) / var(--columns))));
+   display: flex;
+   flex-direction: column;
+   gap: 0.6em;
+   position: relative;
+   padding-top: calc(var(--gap) * 0.75);
+}
+
+.section-menu .row-menu-grid .single-menu-item.special {
+   width: 100%;
+   background-color: rgb(99, 70, 34, 0.05);
+   padding: calc(var(--gap) * 0.75);
+}
+
+.section-menu .row-menu-grid .single-menu-item.special .border-top {
+   display: none;
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-eyebrow {
+   padding-top: calc(var(--gap) * 0.1);
+}
+
+.section-menu .row-menu-grid .single-menu-item.special .col-menu-eyebrow {
+   display: flex;
+   align-items: center;
+   gap: 0.3em;
+}
+
+.section-menu .row-menu-grid .single-menu-item.special .col-menu-eyebrow svg {
+   width: calc(var(--copy-size-m) * 1.1);
+   margin-bottom: 0.15em;
+   margin-left: calc(var(--copy-size-m) * -0.2);
+}
+
+.section-menu .row-menu-grid .single-menu-item.special .col-menu-eyebrow svg * {
+   fill: var(--color-primary);
+   stroke: transparent;
+   stroke-width: 0px;
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-price {
+   display: flex;
+   align-items: center;
+   gap: 1em;
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-price p {
+   font-weight: 400;
+   font-size: var(--copy-size-m);
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-price .duration {
+   display: flex;
+   align-items: center;
+   gap: 0.25em;
+   font-weight: 300;
+   opacity: 0.6;
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-price .duration svg {
+   width: calc(var(--copy-size-m) * 1.2);
+   margin-bottom: 0.1em;
+}
+
+.section-menu .row-menu-grid .single-menu-item .col-menu-price .duration svg * {
+   stroke: var(--color-dark);
+   stroke-width: 1.5px;
+}
+
+@media screen and (max-width: 720px) {
+
+   .section-menu .row-menu-grid .menu-list {
+      --columns: 1;
+   }
+}
+

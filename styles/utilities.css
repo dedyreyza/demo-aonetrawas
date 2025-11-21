@@ -1,0 +1,344 @@
+/* ------------------------- Main Elements -------------------------------------------------- */
+
+/* Section */
+
+.section {
+   padding-top: var(--section-padding);
+   padding-bottom: var(--section-padding);
+   position: relative;
+}
+
+.section-wrap {
+   position: relative;
+}
+
+.section.full-height {
+   padding-top: 0;
+   padding-bottom: 0;
+}
+
+.section.full-height .container > .row {
+   min-height: 100vh;
+   padding-top: var(--section-padding);
+   padding-bottom: var(--section-padding);
+}
+
+@media (hover: none) { 
+   @media screen and (max-width: 1024px) {
+      .section.full-height .container > .row {
+         min-height: 100vh;
+         min-height: calc(var(--vh, 1vh) * 100);
+      }
+   }
+}
+
+/* Section Colors */
+
+[data-bg-section="dark"] {
+   background-color: var(--color-dark);
+}
+
+[data-bg-section="lightgray"] {
+   background-color: var(--color-lightgray);
+}
+
+/* Header (floating bar at the top) */
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   overflow: visible;
+   z-index: 200;
+   pointer-events: none;
+   display: flex;
+}
+
+/* Floating Elements */
+
+.floating-elements {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   overflow: hidden;
+   z-index: 300;
+   pointer-events: none;
+}
+
+/* Container */
+
+.container {
+   margin: 0 auto;
+   padding-left: var(--container-padding);
+   padding-right: var(--container-padding);
+   max-width: calc(var(--title-size) * 11);
+}
+
+.container.wide {
+   max-width: 100%;
+}
+
+.container.medium {
+   max-width: calc(var(--title-size) * 9);
+}
+
+.container.small {
+   max-width: calc(var(--title-size) * 7.75);
+}
+
+.container.full {
+   max-width: 100vw;
+   padding-left: 0;
+   padding-right: 0;
+}
+
+/* Row/Col */
+
+.row {
+   display: flex;
+   width: 100%;
+   position: relative;
+}
+
+.col {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+}
+
+.row.grid {
+   flex-wrap: wrap;
+   gap: var(--gap) var(--grid-gap);
+   --grid-gap: var(--container-padding);
+   --columns: 3;
+}
+
+.row.grid > .col {
+   width: calc((99.99% / var(--columns)) - (var(--grid-gap) * ((var(--columns) - 1) / var(--columns))));
+}
+
+.row.centered {
+   justify-content: center;
+}
+
+.row.centered > .col {
+   justify-content: center;
+   text-align: center;
+}
+
+.row.centered > .styled-col {
+   align-items: center;
+}
+
+.styled-col {
+   display: flex;
+   flex-direction: column;
+   gap: calc(var(--gap) * 1.5);
+}
+
+.styled-col .col-row-title {
+   max-width: calc(var(--title-size) * 5);
+}
+
+.styled-col .col-row-title.tiny {
+   max-width: calc(var(--title-size) * 3.5);
+}
+
+.styled-col .col-row-title.small {
+   max-width: calc(var(--title-size) * 4);
+}
+
+.styled-col .col-row-title.medium {
+   max-width: calc(var(--title-size) * 6.5);
+}
+
+.styled-col .col-row-title.big,
+.styled-col .col-row-title.large {
+   max-width: calc(var(--title-size) * 8.5);
+}
+
+.styled-col .col-row-title.full {
+   max-width: unset;
+}
+
+.styled-col .col-row-table {
+   padding-top: calc(var(--gap) * 0.5);
+}
+
+.styled-col .col-row-text + .col-row-table {
+   padding-top: 0;
+}
+
+.styled-col .col-row-eyebrow span {
+   margin-top: -0.1em;
+   margin-bottom: -0.1em;
+}
+
+.styled-col .col-row-eyebrow + .col-row-title {
+   margin-top: calc(var(--gap) * -0.25);
+}
+
+.styled-col .col-row-title h1 {
+   margin-top: -0.175em;
+   margin-bottom: -0.25em;
+}
+
+.styled-col .col-row-title h2 {
+   margin-top: -0.15em;
+   margin-bottom: -0.25em;
+}
+
+.styled-col .col-row-title h3 {
+   margin-top: -0.14em;
+   margin-bottom: -0.2em;
+}
+
+.styled-col .col-row-text.full {
+   max-width: unset;
+}
+
+.styled-col .col-row-text.large {
+   max-width: 35em;
+}
+
+.styled-col .col-row-text {
+   max-width: 30em;
+}
+
+.styled-col .col-row-text.medium {
+   max-width: 25em;
+}
+
+.styled-col .col-row-text.small {
+   max-width: 20em;
+}
+
+.styled-col .col-row-title + .col-row-ornament {
+   padding-top: calc(var(--gap) * 1);
+}
+
+/* Overlay */
+
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+}
+
+.overlay.overlay-dark {
+   background-color: rgba(var(--color-black-rgb), 0.5);
+}
+
+img.overlay,
+video.overlay {
+   object-fit: cover;
+}
+
+/* No select */
+
+.no-select {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}
+
+/* ------------------------- Borders -------------------------------------------------- */
+
+.border-box {
+   pointer-events: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: transparent;
+   border: 1px solid var(--color-border);
+   transition: border var(--animation-primary);
+}
+
+.border-static-y {
+   width: 1px;
+   height: 100%;
+   background-color: var(--color-border);
+   flex-shrink: 0;
+   transition: background-color var(--animation-primary);
+}
+
+.border-static-x {
+   height: 1px;
+   width: 100%;
+   background-color: var(--color-border);
+   flex-shrink: 0;
+   transition: background-color var(--animation-primary);
+}
+
+.border-bottom {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   background-color: var(--color-border);
+   transition: background-color var(--animation-primary);
+}
+
+.border-left {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 1px;
+   background-color: var(--color-border);
+   transition: background-color var(--animation-primary);
+}
+
+.border-right {
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 100%;
+   width: 1px;
+   background-color: var(--color-border);
+   transition: background-color var(--animation-primary);
+}
+
+.border-top {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 1px;
+   background-color: var(--color-border);
+   transition: background-color var(--animation-primary);
+}
+
+/* ------------------------- Parallax - Images -------------------------------------------------- */
+
+@media screen and (min-width: 1025px) {
+
+   [data-parallax-strength] {
+      overflow: hidden;
+      --parallax-strength: 0%;
+      --parallax-height: 0%;
+   }
+
+   [data-parallax-strength] [data-parallax-target] {
+      height: calc(100% + (var(--parallax-height) * 2));
+      top: calc(var(--parallax-height) * -1);
+      will-change: transform;
+      -webkit-transform: translate3d(0,0,0);
+      z-index: 0;
+      rotate: 0.001deg;
+   }
+
+}
+

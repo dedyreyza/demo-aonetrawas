@@ -1,0 +1,68 @@
+/* ------------------------- Packages Page Sections -------------------------------------------------- */
+/* ------------------------- Section - Packages Header -------------------------------------------------- */
+
+.section-packages-header {
+   padding-bottom: 0;
+}
+
+/* ------------------------- Section - Packages Cards -------------------------------------------------- */
+
+.section-packages-intro {
+   padding-bottom: 0;
+}
+
+/* ------------------------- Section - Packages Cards -------------------------------------------------- */
+
+.section-packages-cards {
+   padding-top: calc(var(--gap) * 3);
+}
+
+.section-packages-cards .row.grid {
+   --columns: 3;
+   --grid-gap: var(--container-padding);
+   gap: calc(var(--gap) * 3) var(--grid-gap);
+}
+
+@media screen and (max-width: 1024px) {
+   .section-packages-cards .row.grid {
+      --columns: 2;
+      gap: calc(var(--gap) * 1) var(--grid-gap);
+   }
+}
+
+@media screen and (max-width: 720px) {
+   .section-packages-cards .row.grid {
+      --columns: 1;
+   }
+}
+
+/* ------------------------- Section - Packages Single Header -------------------------------------------------- */
+
+.section-packages-single-header {
+   padding-bottom: 0;
+   z-index: 2;
+}
+
+.section-packages-single-header .col-row-image {
+   padding-top: calc(var(--gap) * 1.5);
+}
+
+.section-packages-single-header .styled-figure {
+   width: var(--card-width);
+   margin-bottom: calc((var(--card-width) * 1.333333) * -0.666);
+}
+
+.section-packages-single-header + .section-big-image .background-media {
+   min-height: 90vh;
+   transform-origin: bottom center;
+}
+
+@media (hover: none) { 
+   @media screen and (max-width: 1024px) {
+      .section-packages-single-header + .section-big-image .background-media {
+         min-height: 65vh;
+         min-height: calc(var(--vh, 1vh) * 65);
+      }
+   }
+}
+

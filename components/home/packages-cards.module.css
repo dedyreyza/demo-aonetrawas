@@ -1,0 +1,12 @@
+/* ⚠️ NOT USED - Reference Only
+ *
+ * This CSS module is NOT imported by packages-cards.tsx
+ * The actual CSS for this component is in: styles/sections/packages.css
+ *
+ * Component uses global utility classes:
+ * - .section-packages-cards
+ * - .row, .col, .grid
+ * - .card, .styled-figure
+ *
+ * This file is kept as reference for potential future CSS module migration.
+ */
