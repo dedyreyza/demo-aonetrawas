@@ -91,12 +91,6 @@
    z-index: 2;
 }
 
-.single-packages-card .overlay-dark {
-   transition: all var(--animation-smooth);
-   opacity: 0;
-   z-index: 3;
-}
-
 .single-packages-card .card-content {
    position: absolute;
    top: 0;

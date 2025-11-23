@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface LenisInstance {
@@ -330,13 +331,12 @@ export default function Header() {
           >
             <figure className="overlay">
               <picture className="styled-image overlay">
-                <img
+                <Image
                   alt="Edge of studio pool"
                   className="overlay"
                   src="/media/layout/navigation/91a2e0e5d5-1703335783/navigation-image-stay-720x1440-crop-q72.jpg"
-                  width="720"
-                  height="1440"
-                  loading="lazy"
+                  width={720}
+                  height={1440}
                 />
               </picture>
             </figure>
@@ -348,13 +348,12 @@ export default function Header() {
           >
             <figure className="overlay">
               <picture className="styled-image overlay">
-                <img
+                <Image
                   alt="Female having drinks at the bar"
                   className="overlay"
                   src="/media/layout/navigation/217f1cbc5b-1703335787/blacktable-720x1440-crop-q72.jpg"
-                  width="720"
-                  height="1440"
-                  loading="lazy"
+                  width={720}
+                  height={1440}
                 />
               </picture>
             </figure>
@@ -366,13 +365,12 @@ export default function Header() {
           >
             <figure className="overlay">
               <picture className="styled-image overlay">
-                <img
+                <Image
                   alt="Wooden pattern on wall with shadow and light"
                   className="overlay"
                   src="/media/layout/navigation/6c056bd40a-1703335823/singingbowl-720x1440-crop-q72.jpg"
-                  width="720"
-                  height="1440"
-                  loading="lazy"
+                  width={720}
+                  height={1440}
                 />
               </picture>
             </figure>
@@ -384,13 +382,12 @@ export default function Header() {
           >
             <figure className="overlay">
               <picture className="styled-image overlay">
-                <img
+                <Image
                   alt="Nerves of leave"
                   className="overlay"
                   src="/media/layout/navigation/7a4f925c5b-1703335878/navigation-image-discover-720x1440-crop-q72.jpg"
-                  width="720"
-                  height="1440"
-                  loading="lazy"
+                  width={720}
+                  height={1440}
                 />
               </picture>
             </figure>

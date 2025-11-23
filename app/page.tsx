@@ -1,6 +1,5 @@
 'use client';
 
-import LoadingScreen from '@/components/layout/loading-screen';
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import Hero from '@/components/home/hero';
@@ -22,7 +21,6 @@ export default function HomePage() {
 
   return (
     <>
-      <LoadingScreen />
       <Header />
 
       <main className="main" id="main" data-barba="container">

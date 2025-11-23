@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade, Controller, Parallax } from 'swiper/modules';
@@ -247,11 +248,12 @@ export default function VillaSlider() {
               {villas.map((villa) => (
                 <li key={`bg-${villa.id}`} className="swiper-slide overlay">
                   <div className="swiper-slide-inner overlay">
-                    <img
+                    <Image
                       className="overlay"
                       src={villa.bgImage}
                       alt={`${villa.name} Detail`}
-                      loading="lazy"
+                      fill
+                      sizes="100vw"
                     />
                   </div>
                 </li>
@@ -302,11 +304,12 @@ export default function VillaSlider() {
                     className="swiper-slide-inner overlay card-small"
                     data-swiper-parallax="12.5%"
                   >
-                    <img
+                    <Image
                       className="overlay"
                       src={villa.cardImage}
                       alt={`${villa.name} Overview`}
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                     />
                   </div>
                   <Link

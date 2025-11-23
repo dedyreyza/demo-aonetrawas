@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Button from '@/components/ui/button';
 
 interface ImageSplitProps {
@@ -44,15 +45,13 @@ export default function ImageSplit({
           <div className="col col-image">
             <figure className="styled-figure default card-small">
               <picture className="overlay">
-                <img
+                <Image
                   alt={imageAlt}
                   data-parallax-target
-                  className={imageOverlay ? 'lazy overlay' : 'lazy'}
+                  className={imageOverlay ? 'overlay' : ''}
                   src={imageSrc}
-                  data-src={imageSrc}
-                  width="1080"
-                  height="1440"
-                  loading="lazy"
+                  width={1080}
+                  height={1440}
                 />
               </picture>
             </figure>

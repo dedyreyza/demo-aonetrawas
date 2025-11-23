@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 
 interface Package {
@@ -55,15 +56,14 @@ export default function PackagesCards() {
             <li key={pkg.id} className="col">
               <div className="single-packages-card">
                 <div className="card-image card-small">
-                  <img
-                    className="overlay lazy"
+                  <Image
+                    className="overlay"
                     src={pkg.image}
-                    data-src={pkg.image}
                     alt={pkg.alt}
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
                   <div className="overlay overlay-gradient"></div>
-                  <div className="overlay overlay-dark"></div>
                 </div>
                 <div className="card-content">
                   <div className="card-row card-row-eyebrow">

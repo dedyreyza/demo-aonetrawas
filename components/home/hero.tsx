@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import styles from './hero.module.css';
 
@@ -64,10 +65,13 @@ export default function Hero() {
             key={slide.id}
             className={`${styles.slide} ${index === currentSlide ? styles.active : ''}`}
           >
-            <img
+            <Image
               src={slide.image}
               alt={slide.heading}
               className={styles.image}
+              fill
+              sizes="100vw"
+              priority={index === 0}
             />
           </div>
         ))}

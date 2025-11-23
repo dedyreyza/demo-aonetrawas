@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function IntroSection() {
   return (
     <section
@@ -11,15 +13,13 @@ export default function IntroSection() {
             <div className="col-row">
               <figure className="styled-figure default">
                 <picture className="overlay">
-                  <img
+                  <Image
                     alt="Campfire at sunset"
                     data-parallax-target
                     className="lazy overlay"
                     src="/media/home/intro/intro_amenities.jpg"
-                    data-src="/media/home/intro/intro_amenities.jpg"
-                    width="540"
-                    height="720"
-                    loading="lazy"
+                    width={540}
+                    height={720}
                   />
                 </picture>
               </figure>
@@ -27,15 +27,13 @@ export default function IntroSection() {
             <div className="col-row">
               <figure className="styled-figure default">
                 <picture className="overlay">
-                  <img
+                  <Image
                     alt="Wall pattern made of wood"
                     data-parallax-target
                     className="lazy overlay"
                     src="/media/home/intro/intro_dining.jpg"
-                    data-src="/media/home/intro/intro_dining.jpg"
-                    width="540"
-                    height="720"
-                    loading="lazy"
+                    width={540}
+                    height={720}
                   />
                 </picture>
               </figure>
@@ -73,15 +71,13 @@ export default function IntroSection() {
                 data-parallax-height="0.2"
               >
                 <picture className="overlay">
-                  <img
+                  <Image
                     alt="Lampion loop birds sunset"
                     data-parallax-target
                     className="lazy overlay"
                     src="/media/home/intro/intro_pool.jpg"
-                    data-src="/media/home/intro/intro_pool.jpg"
-                    width="540"
-                    height="720"
-                    loading="lazy"
+                    width={540}
+                    height={720}
                   />
                 </picture>
               </figure>
@@ -93,15 +89,13 @@ export default function IntroSection() {
                 data-parallax-height="0.2"
               >
                 <picture className="overlay">
-                  <img
+                  <Image
                     alt="Leaves fern"
                     data-parallax-target
                     className="lazy overlay"
                     src="/media/home/intro/intro_decor.jpg"
-                    data-src="/media/home/intro/intro_decor.jpg"
-                    width="540"
-                    height="720"
-                    loading="lazy"
+                    width={540}
+                    height={720}
                   />
                 </picture>
               </figure>
