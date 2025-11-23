@@ -71,6 +71,7 @@ export default function Hero() {
               className={styles.image}
               fill
               sizes="100vw"
+              quality={90}
               priority={index === 0}
             />
           </div>
