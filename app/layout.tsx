@@ -55,12 +55,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-        />
-      </head>
       <body
         data-barba="wrapper"
         data-page-transition="not-active"
